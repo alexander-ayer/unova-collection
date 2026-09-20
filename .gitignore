@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# macOS
+.DS_Store
+
+# Credentials — never commit these
+config.py
+.env
+*.pem
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# OS/temp files
+*.log
+*.tmp
+
+# Build files
+data/*.json
+data/unova_cards.csv
