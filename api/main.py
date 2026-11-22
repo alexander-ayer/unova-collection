@@ -1,5 +1,9 @@
 from connection import get_connection
+from fastapi import FastAPI
+from api.cards_db import get_all_cards
 
-conn = get_connection()
-print(conn.is_connected())
-conn.close()
+app = FastAPI()
+
+@app.get("/cards")
+def list_cards():
+    return get_all_cards()
