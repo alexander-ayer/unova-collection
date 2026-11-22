@@ -1,6 +1,6 @@
 from connection import get_connection
 from fastapi import FastAPI
-from api.cards_db import get_all_cards
+from cards_db import get_all_cards
 
 app = FastAPI()
 

@@ -5,7 +5,11 @@ BINDER_ORDER_QUERY = """
            card_set, card_type, rarity, acquired
     FROM cards
     ORDER BY
-        CASE WHEN rarity IN ('IR', 'SIR', 'BWR') THEN 1 ELSE 0 END,
+        CASE 
+            WHEN rarity IN ('IR', 'SIR') THEN 1 
+            WHEN rarity = 'BWR' THEN 2
+            ELSE 0 
+        END,
         unova_dex_number,
         card_set,
         FIELD(rarity, 'C', 'U', 'R', 'RH', 'PB', 'MB', 'RR', 'UR', 'IR', 'SIR', 'BWR'),
